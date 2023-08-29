@@ -58,7 +58,7 @@ void _preorder(heap_t *tree, heap_t **node, size_t height)
 	if (!tree)
 		return;
 
-	if (height == NULL)
+	if (!height)
 		*node = tree;
 	height--;
 
