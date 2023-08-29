@@ -75,7 +75,7 @@ void heapify(heap_t *root)
 	int value;
 	heap_t *tmp1, *tmp2;
 
-	if (!root)
+	if (root == NULL)
 		return;
 
 	tmp1 = root;
