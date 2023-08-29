@@ -29,3 +29,6 @@ The first insert operation in a tree is to create a tree. To insert an element i
 
 ## Search Operation:
 To perform a search for an element in a tree, start from the root node. If the value of the element being searched for is less than the that of the root node search for the element in the left subtree or node. Otherwise, search for the elment in the right subtree or node.
+
+## Preorder Traversal:
+This type of traversal method is a situation whereby the root node is visited first, then the left subtree or node and finally to the right subtree or node.
