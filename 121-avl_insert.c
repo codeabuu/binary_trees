@@ -14,8 +14,7 @@ avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval)
 
 	if (!*tree)
 	{
-		*new = binary_tree_node(parent, nval);
-		return (new)
+		return (*new = binary_tree_node(parent, nval));
 	}
 	if ((*tree)->n > nval)
 	{
