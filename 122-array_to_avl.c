@@ -12,6 +12,7 @@ avl_t *array_to_avl(int *array, size_t size)
 {
 	unsigned int i;
 	avl_t *root;
+
 	root = NULL;
 
 	i = 0;
