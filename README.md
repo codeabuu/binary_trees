@@ -35,3 +35,8 @@ This type of traversal method is a situation whereby the root node is visited fi
 
 ## Inorder Operation:
 This type of traversal method is a situation whereby the left subtree or node is visited first, then the root node and finally the right subtree or node.
+
+## Postorder Operation:
+This type of traversal method is a situation whereby the left subtree or node is visited first, then the right subtree or node and finally the root.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
