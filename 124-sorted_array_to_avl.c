@@ -34,9 +34,9 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 void sata_helper(avl_t **root, int *array, size_t lo, size_t hi)
 {
 	avl_t *new;
+	size_t middle;
 
 	new = NULL;
-	size_t middle;
 
 	if (hi - lo > 1)
 	{
