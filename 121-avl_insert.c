@@ -13,13 +13,11 @@ avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval)
 	int bval;
 
 	if (!*tree)
-	{
 		return (*new = binary_tree_node(parent, nval));
-	}
 	if ((*tree)->n > nval)
 	{
 		(*tree)->left = r_insert_node(&(*tree)->left, *tree, new, nval);
-		if ((*tree)->left == NULL)
+		if (!(*tree)->left)
 			return (NULL);
 	}
 	else if ((*tree)->n < nval)
@@ -29,9 +27,8 @@ avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval)
 			return (NULL);
 	}
 	else
-	{
 		return (*tree);
-	}
+
 	bval = binary_tree_balance(*tree);
 	if (bval > 1 && (*tree)->left->n > nval)
 	{
@@ -61,12 +58,13 @@ avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval)
  */
 avl_t *avl_insert(avl_t **tree, int value)
 {
-	avl_t *new = NULL;
+	avl_t *new;
 
-	if (*tree == NULL)
+	new = NULL;
+
+	if (!*tree)
 	{
-		*tree = binary_tree_node(NULL, value);
-		return (*tree);
+		return (*tree = binary_tree_node(NULL, value));
 	}
 	r_insert_node(tree, *tree, &new, value);
 	return (new);
