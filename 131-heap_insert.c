@@ -1,22 +1,65 @@
 #include "binary_trees.h"
 
 /**
- * array_to_heap - builds a Max Binary Heap tree from an array
- * @array: a pointer to the first element of the array to be converted
- * @size: the number of element in the array
+ * heap_insert - inserts a value in Max Binary Heap
+ * @root: a double pointer to the root node of the Heap to insert the value
+ * @value: the value to store in the node to be inserted
  *
- * Return: a pointer to the root node of the created Binary Heap
+ * Return: a pointer to the created node
  *         NULL on failure
  */
-heap_t *array_to_heap(int *array, size_t size)
+heap_t *heap_insert(heap_t **root, int value)
 {
-	unsigned int i = 0;
-	heap_t *root = NULL;
+	heap_t *tree, *new, *flip;
+	int size, leaves, sub, bit, level, tmp;
 
-	for (; i < size; i++)
+	if (root == NULL)
+		return (NULL);
+	if ((*root) == NULL)
+		return (*root = binary_tree_node(NULL, value));
+	tree = *root;
+	size = binary_tree_size(tree);
+	leaves = size;
+	level = 0;
+	sub = 1;
+	for (; leaves >= sub; sub *= 2, level++)
+		leaves -= sub;
+	for (bit = 1 << (level - 1); bit != 1; bit >>= 1)
 	{
-		heap_insert(&root, array[i]);
+		if (leaves & bit)
+		{
+			tree = tree->right;
+		}
+		else
+		{
+			tree = tree->left;
+		}
 	}
+	new = binary_tree_node(tree, value);
+	leaves & 1 ? (tree->right = new) : (tree->left = new);
 
-	return (root);
+	flip = new;
+	for (; flip->parent && (flip->n > flip->parent->n); flip = flip->parent)
+	{
+		tmp = flip->n;
+		flip->n = flip->parent->n;
+		flip->parent->n = tmp;
+		new = new->parent;
+	}
+	return (new);
+}
+
+/**
+ * binary_tree_size - measures the size of a binary tree
+ * @tree: tree to measure the size of
+ *
+ * Return: size of the tree
+ *         0 if tree is NULL
+ */
+size_t binary_tree_size(const binary_tree_t *tree)
+{
+	if (tree == NULL)
+		return (0);
+
+	return (binary_tree_size(tree->left) + binary_tree_size(tree->right) + 1);
 }
