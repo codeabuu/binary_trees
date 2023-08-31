@@ -29,7 +29,7 @@ All of the following files are programs written in C:
 | ` 2. Insert right` | Write a function that inserts a node as the right-child of another node.|
 | ` 3. Delete` | Write a function that deletes an entire binary tree.|
 | ` 4. Is leaf` | Write a function that checks if a node is a leaf..|
-| ` 100-first.c` | Write a function that prints You're beat! and yet, you must allow,\nI bore my house upon my back!\n before the main function is executed.|
+| ` 5. Is root` | Write a function that checks if a given node is a root.|
 | ` 101-hello_holberton.asm` | Write a 64-bit program in assembly that prints Hello, Holberton, followed by a new line.|
 
 <center> <h1>BINARY TREES</h1> </center>				
