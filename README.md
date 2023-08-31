@@ -26,9 +26,9 @@ All of the following files are programs written in C:
 | -------- | ----------- |
 | ` 0. New node`| Write a function that creates a binary tree node.|
 | ` 1. Insert left` | Write a function that inserts a node as the left-child of another node.|
-| ` 2-add_node.c` | Write a function that adds a new node at the beginning of a list_t list.|
-| ` 3-add_node_end.c` | Write a function that adds a new node at the end of a list_t list.|
-| ` 4-free_list.c` | Write a function that frees a list_t list..|
+| ` 2. Insert right` | Write a function that inserts a node as the right-child of another node.|
+| ` 3. Delete` | Write a function that deletes an entire binary tree.|
+| ` 4. Is leaf` | Write a function that checks if a node is a leaf..|
 | ` 100-first.c` | Write a function that prints You're beat! and yet, you must allow,\nI bore my house upon my back!\n before the main function is executed.|
 | ` 101-hello_holberton.asm` | Write a 64-bit program in assembly that prints Hello, Holberton, followed by a new line.|
 
