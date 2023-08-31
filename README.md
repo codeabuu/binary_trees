@@ -9,12 +9,12 @@ This is a TEAM Project done during **Full Stack Software Engineering studies** a
 * What are the different traversal methods to go through a binary tree
 * What is a complete, a full, a perfect, a balanced binary tree
 
-## Technologies
-* C files are compiled using `gcc 4.8.4`
-* C files are written according to the C90 standard
-* Tested on Ubuntu 14.04 LTS
-* Team Member: Lawrence Maduabuchi
-* Date: April 27th 2023
+## Requirements
+* All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+* A README.md file, at the root of the folder of the project, is mandatory
+* Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+* Team Member: Lawrence Maduabuchi & Abdullahi Ngui
+* Date: August 30th 2023
 
 
 
