@@ -58,7 +58,7 @@ void _preorder(heap_t *tree, heap_t **node, size_t height)
 	if (!tree)
 		return;
 
-	if (height == NULL)
+	if (!height)
 		*node = tree;
 	height--;
 
@@ -82,9 +82,9 @@ void heapify(heap_t *root)
 
 	while (1)
 	{
-		if (!tmp1->left)
+		if (tmp1->left == NULL)
 			break;
-		if (!tmp1->right)
+		if (tmp1->right == NULL)
 			tmp2 = tmp1->left;
 		else
 		{
@@ -95,7 +95,9 @@ void heapify(heap_t *root)
 		}
 		if (tmp1->n > tmp2->n)
 			break;
-		tmp1->n = (tmp1 != tmp2) ? (tmp2->n = (value = tmp1->n)) : tmp1->n;
+		value = tmp1->n;
+		tmp1->n = tmp2->n;
+		tmp2->n = value;
 		tmp1 = tmp2;
 	}
 }
@@ -112,7 +114,7 @@ int heap_extract(heap_t **root)
 	int value;
 	heap_t *heap_r, *node;
 
-	if (root == NULL || !*root)
+	if (!root || !*root)
 		return (0);
 	heap_r = *root;
 	value = heap_r->n;
