@@ -4,7 +4,8 @@ This is a TEAM Project done during **Full Stack Software Engineering studies** a
 
 * What is a binary tree
 * What is the difference between a binary tree and a Binary Search Tree
-
+* What is the possible gain in terms of time complexity compared to linked lists
+* What are the depth, the height, the size of a binary tree
 
 ## Technologies
 * C files are compiled using `gcc 4.8.4`
