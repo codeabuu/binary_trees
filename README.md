@@ -24,8 +24,8 @@ All of the following files are programs written in C:
 
 | Filename | Description |
 | -------- | ----------- |
-| ` 0-print_list.c`| Write a function that prints all the elements of a list_t list.|
-| ` 1-list_len.c` | Write a function that returns the number of elements in a linked list_t list.|
+| ` 0. New node`| Write a function that creates a binary tree node.|
+| ` 1. Insert left` | Write a function that inserts a node as the left-child of another node.|
 | ` 2-add_node.c` | Write a function that adds a new node at the beginning of a list_t list.|
 | ` 3-add_node_end.c` | Write a function that adds a new node at the end of a list_t list.|
 | ` 4-free_list.c` | Write a function that frees a list_t list..|
